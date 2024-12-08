@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 function Hero() {
   return (
@@ -35,44 +36,99 @@ function Hero() {
                 </Link>
               </div>
               <div className="flex items-center gap-12 pt-8 pl-12">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600">50+</div>
+                <motion.div 
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ 
+                    opacity: 1, 
+                    y: 0,
+                    transition: {
+                      duration: 0.6,
+                      ease: "easeOut"
+                    }
+                  }}
+                >
+                  <motion.div 
+                    className="text-3xl font-bold text-primary-600"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    50+
+                  </motion.div>
                   <div className="text-gray-600">Schools</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600">25+</div>
+                </motion.div>
+                <motion.div 
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ 
+                    opacity: 1, 
+                    y: 0,
+                    transition: {
+                      duration: 0.6,
+                      delay: 0.2,
+                      ease: "easeOut"
+                    }
+                  }}
+                >
+                  <motion.div 
+                    className="text-3xl font-bold text-primary-600"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.3
+                    }}
+                  >
+                    25+
+                  </motion.div>
                   <div className="text-gray-600">Colleges</div>
-                </div>
-                {/* <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600">10k+</div>
-                  <div className="text-gray-600">Students</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600">50+</div>
-                  <div className="text-gray-600">Countries</div>
-                </div> */}
+                </motion.div>
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 animate-slide-up">
-            <div className="relative">
-              <img 
-                src="/public/rb_1773.png"
+          <div className="md:w-1/2">
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.img 
+                initial={{ y: 20 }}
+                animate={{ 
+                  y: [-10, 10, -10],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                src="./rb_1773.png"
                 alt="Education"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl object-contain w-full"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+              <motion.div 
+                className="absolute -bottom-6 -left-6 bg-gradient-to-br from-white/80 to-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg"
+              >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+
                     <span className="text-2xl">🎓</span>
-                  </div>
                   <div>
                     <div className="font-semibold text-gray-800">Success Rate</div>
-                    <div className="text-primary-600 font-bold">98%</div>
+                      98%
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
