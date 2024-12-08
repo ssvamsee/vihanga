@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vihanga/static/css/main.b7139c1a.css",
+    "main.js": "/vihanga/static/js/main.12f93aa0.js",
+    "index.html": "/vihanga/index.html",
+    "main.b7139c1a.css.map": "/vihanga/static/css/main.b7139c1a.css.map",
+    "main.12f93aa0.js.map": "/vihanga/static/js/main.12f93aa0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7139c1a.css",
+    "static/js/main.12f93aa0.js"
+  ]
+}
