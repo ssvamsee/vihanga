@@ -144,7 +144,7 @@ function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Location</h3>
-                  <p className="text-gray-600">3rd Floor, Sree Residency, behind Sarathi Studio, Ameerpet, Hyderabad</p>
+                  <p className="text-gray-600">3rd Floor, Sree Residency, behind Sarathi Studio, Ameerpet, Hyderabad - 500073, Telangana, India</p>
                 </div>
               </div>
             </div>
